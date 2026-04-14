@@ -1,0 +1,22 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Admin Dashboard</title>
+    <link rel="stylesheet" href="{{ url_for('static', filename='style.css') }}">
+</head>
+<body>
+
+<h2>Admin Control Panel</h2>
+
+<ul>
+    <ul>
+    <li><a href="{{ url_for('admin.create_hostel') }}">Create Hostel</a></li>
+    <li><a href="{{ url_for('admin.create_room') }}">Create Room</a></li>
+    <li><a href="{{ url_for('admin.view_students') }}">View Students</a></li>
+    <li><a href="/view-allocations">View Allocations</a></li>
+    <li><a href="/view-reports">View Theft Reports</a></li>
+    <li><a href="/logout">Logout</a></li>
+</ul>
+
+</body>
+</html>

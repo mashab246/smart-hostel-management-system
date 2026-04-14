@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Student Dashboard</title>
+    <link rel="stylesheet" href="{{ url_for('static', filename='style.css') }}">
+</head>
+<body>
+
+    <h2>Welcome to Smart Hostel System</h2>
+
+    <p>Registration Number: {{ reg_no }}</p>
+
+    <hr>
+
+    <ul>
+        <li><a href="/apply">Apply for Hostel</a></li>
+        <li><a href="/my-allocation">View My Allocation</a></li>
+        <li><a href="/report-theft">Report Theft</a></li>
+        <li><a href="/logout">Logout</a></li>
+    </ul>
+
+</body>
+</html>

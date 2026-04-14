@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Room</title>
+</head>
+<body>
+
+<h2>Create Room</h2>
+
+<form method="POST">
+    Room Number:
+    <input type="text" name="room_no" required><br><br>
+
+    Capacity:
+    <input type="number" name="capacity" required><br><br>
+
+    Select Hostel:
+    <select name="hostelid">
+        {% for hostel in hostels %}
+            <option value="{{ hostel.id }}">
+                {{ hostel.hostelname }}
+            </option>
+        {% endfor %}
+    </select><br><br>
+
+    <button type="submit">Create Room</button>
+</form>
+</body>
+</html>

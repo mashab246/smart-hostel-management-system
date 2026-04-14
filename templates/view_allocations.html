@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>All Allocations</title>
+    <link rel="stylesheet" href="{{ url_for('static', filename='style.css') }}">
+</head>
+<body>
+
+<h2>All Hostel Allocations</h2>
+
+<table border="1">
+    <tr>
+        <th>Student ID</th>
+        <th>Hostel</th>
+        <th>Room Number</th>
+        <th>Status</th>
+    </tr>
+
+    {% for allocation in allocations %}
+    <tr>
+        <td>{{ allocation.student_id }}</td>
+        <td>{{ allocation.hostel_name }}</td>
+        <td>{{ allocation.room_number }}</td>
+        <td>{{ allocation.allocation_status }}</td>
+    </tr>
+    {% endfor %}
+</table>
+
+<br>
+<a href="/admin-dashboard">Back to Dashboard</a>
+
+</body>
+</html>

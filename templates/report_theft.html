@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Report Theft</title>
+    <link rel="stylesheet" href="{{ url_for('static', filename='style.css') }}">
+</head>
+<body>
+
+<h2>Report Theft Incident</h2>
+
+<form action="/report-theft" method="POST">
+
+    <label>Description:</label><br>
+    <textarea name="description" required></textarea>
+    <br><br>
+
+    <button type="submit">Submit Report</button>
+
+</form>
+
+<br>
+<a href="/dashboard">Back to Dashboard</a>
+
+</body>
+</html>
